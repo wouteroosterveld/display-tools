@@ -1,0 +1,14 @@
+#!/bin/sh
+
+/usr/local/bin/dispd&
+sleep 1
+/usr/local/bin/disp --exitboot
+sleep 1
+/usr/local/bin/info-line-1.sh&
+sleep 1
+/usr/local/bin/info-line-2.sh&
+sleep 1
+/usr/local/bin/disp --buttonon
+sleep 1
+/usr/local/bin/menud& 1>/dev/null
+
